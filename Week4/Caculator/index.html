@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="display">
+            <input type="text" id="result" disabled />
+            <button id="copyBtn">Copy</button>
+        </div>
+
+        <div class="buttons">
+            <!-- Buttons will match the JS functionality -->
+            <button class="btn operator" id="sqrt">√</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn operator">/</button>
+
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn operator">*</button>
+
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn operator">-</button>
+
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button class="btn" id="clear">C</button>
+            <button class="btn operator">+</button>
+
+            <button class="btn equal" id="equals">=</button>
+        </div>
+
+        <div class="controls">
+            <button id="themeToggle">Dark/Light</button>
+            <button id="soundToggle">🔊</button>
+        </div>
+
+        <div class="history">
+            <h3>Lịch sử</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình Xem Ảnh Linh Hoạt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Thư viện xem ảnh</h1>
+        <h3>Phóng to và kéo giữ chuột để di chuyển ảnh!!</h3>
+        
+        <div class="controls-input">
+            <input type="file" id="fileUpload" accept="image/*">
+            <button onclick="document.getElementById('fileUpload').click()">Tải Ảnh Lên</button>
+            
+            <input type="url" id="imageURL" placeholder="Hoặc dán URL ảnh vào đây...">
+            <button onclick="loadImageFromURL()">Xem Từ URL</button>
+        </div>
+
+        <div class="controls-zoom">
+            <button onclick="zoomIn()">Phóng To (+)</button>
+            <button onclick="zoomOut()">Thu Nhỏ (-)</button>
+            <button onclick="resetZoom()">Đặt Lại</button>
+        </div>
+
+        <div class="image-viewer">
+            <div id="imageWrapper">
+                <img id="displayImage" src="" alt="Ảnh sẽ hiển thị ở đây">
+            </div>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

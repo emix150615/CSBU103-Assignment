@@ -1,0 +1,153 @@
+/* ====== GENERAL STYLES ====== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 320px;
+}
+
+/* ====== DISPLAY ====== */
+.display {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#result {
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#copyBtn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #3498db;
+    color: white;
+    transition: 0.2s;
+}
+
+#copyBtn:hover {
+    background: #217dbb;
+}
+
+/* ====== BUTTONS ====== */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 18px;
+    background: #ececec;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #d5d5d5;
+}
+
+.operator {
+    background: #ffbb55;
+}
+
+.equal {
+    grid-column: span 4;
+    background: #4caf50;
+    color: white;
+}
+
+/* ====== CONTROLS ====== */
+.controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#themeToggle, #soundToggle {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #7f8c8d;
+    color: white;
+}
+
+/* ====== HISTORY ====== */
+.history {
+    margin-top: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Make calculator content and history scroll independently */
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+}
+
+.buttons {
+    overflow-y: auto;
+}
+
+/* ====== DARK MODE ====== */
+.dark-mode {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .calculator-container {
+    background: #333;
+    color: white;
+}
+
+.dark-mode #result {
+    background: #555;
+    color: white;
+    border: 1px solid #777;
+}
+
+.dark-mode .btn {
+    background: #555;
+    color: white;
+}
+
+.dark-mode .btn:hover {
+    background: #444;
+}
+
+.dark-mode .operator {
+    background: #d98d21;
+}
+
+.dark-mode .equal {
+    background: #3fae40;
+}
+
+.dark-mode #copyBtn {
+    background: #2980b9;
+}

@@ -1,0 +1,195 @@
+.projects_container {
+    /* Container bao toàn bộ section Projects */
+
+    display: flex;
+    /* Dùng Flexbox để sắp xếp phần tử con */
+
+    flex-direction: column;
+    /* Các phần tử con xếp theo chiều dọc */
+
+    gap: 32px;
+    /* Khoảng cách giữa các phần tử con */
+}
+
+
+/* ===== GRID CONTAINER ===== */
+.projects__cards_container {
+    /* Container chứa các card project */
+
+    display: grid;
+    /* Sử dụng CSS Grid để tạo layout dạng lưới */
+
+    margin: 0 auto;
+    /* Căn giữa container theo chiều ngang */
+
+    max-width: 90%;
+    /* Chiều rộng tối đa 90% phần tử cha */
+
+    grid-template-columns: repeat(auto-fit, minmax(0, 340px));
+    /* Tự động tạo số cột phù hợp
+       Mỗi card tối đa 340px */
+
+    gap: 32px;
+    /* Khoảng cách giữa các card */
+
+    justify-content: center;
+    /* Căn giữa các cột theo chiều ngang */
+
+    align-content: center;
+    /* Căn giữa toàn bộ grid theo chiều dọc */
+}
+
+
+/* ===== PROJECT CARD ===== */
+.projects_cards {
+    /* Một card project */
+
+    border: 1px solid hsla(var(--p-700-code), 0.1);
+    /* Viền mỏng với màu primary có độ trong suốt */
+
+    border-radius: 24px;
+    /* Bo góc card */
+
+    background: var(--foreground-color);
+    /* Màu nền (thường là trắng) */
+
+    overflow: hidden;
+    /* Ẩn nội dung tràn ra ngoài border */
+
+    box-shadow:
+        1px 4px 6px -1px hsla(var(--p-950-code), 0.1),
+        1px 2px 4px -2px hsla(var(--p-950-code), 0.1);
+    /* Đổ bóng 2 lớp tạo chiều sâu */
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* Hiệu ứng mượt khi hover */
+}
+
+
+/* Hover card */
+.projects_cards:hover {
+    /* Khi rê chuột vào card */
+
+    box-shadow: 0 15px 40px hsla(var(--p-950-code), 0.2);
+    /* Tăng độ đổ bóng */
+
+    transform: scale(1.05) skew(-1deg, -1deg);
+    /* Phóng to nhẹ và nghiêng nhẹ */
+}
+
+
+/* ===== CARD WRAPPER ===== */
+.projects__cards_wrapper {
+    /* Phần bọc phía trên của card (thường chứa ảnh) */
+
+    background: hsla(var(--p-700-code), 0.1);
+    /* Nền nhạt theo màu primary */
+
+    padding: 28px;
+    /* Khoảng cách nội dung bên trong */
+
+    border-top-left-radius: 0.25rem;
+    /* Bo góc trên bên trái */
+}
+
+
+/* ===== PROJECT IMAGE ===== */
+.projects__cards_img {
+    /* Hình ảnh của project */
+
+    width: 100%;
+    /* Ảnh chiếm toàn bộ chiều rộng container */
+
+    max-width: 284px;
+    /* Nhưng không vượt quá 284px */
+
+    height: 284px;
+    /* Chiều cao cố định */
+
+    object-fit: cover;
+    /* Ảnh không méo, tự crop nếu cần */
+
+    border-radius: 24px;
+    /* Bo góc ảnh */
+
+    transition: transform 0.4s ease-in-out;
+    /* Hiệu ứng phóng to mượt */
+}
+
+
+/* Hover image */
+.projects__cards_img:hover {
+    /* Khi rê chuột vào ảnh */
+
+    transform: scale(1.05);
+    /* Phóng to nhẹ */
+}
+
+
+/* ===== TITLES CONTAINER ===== */
+.projects__cards_titles {
+    /* Phần chứa tiêu đề và mô tả */
+
+    display: flex;
+    /* Dùng Flexbox */
+
+    flex-direction: column;
+    /* Sắp xếp theo chiều dọc */
+
+    padding: 28px 32px;
+    /* Padding trên-dưới 28px, trái-phải 32px */
+
+    gap: 4px;
+    /* Khoảng cách giữa h4 và h3 */
+}
+
+
+/* ===== SUBTITLE (h4) ===== */
+.projects__cards_titles h4 {
+    /* Tiêu đề phụ */
+
+    font-size: var(--caption-font-size);
+    /* Kích thước chữ nhỏ */
+
+    line-height: var(--caption-line-height);
+    /* Chiều cao dòng */
+
+    text-transform: uppercase;
+    /* Viết hoa toàn bộ */
+
+    color: var(--n-500);
+    /* Màu xám trung tính */
+}
+
+
+/* ===== MAIN TITLE (h3) ===== */
+.projects__cards_titles h3 {
+    /* Tiêu đề chính của project */
+
+    font-size: var(--h3-font-size);
+    /* Kích thước tiêu đề */
+
+    line-height: var(--h3-line-height);
+    /* Chiều cao dòng */
+
+    font-weight: 500;
+    /* Độ đậm trung bình */
+
+    text-transform: capitalize;
+    /* Viết hoa chữ cái đầu mỗi từ */
+
+    color: var(--p-950);
+    /* Màu primary đậm */
+
+    display: -webkit-box;
+    /* Kích hoạt chế độ line clamp */
+
+    -webkit-box-orient: vertical;
+    /* Hướng box theo chiều dọc */
+
+    -webkit-line-clamp: 1;
+    /* Giới hạn tối đa 1 dòng */
+
+    overflow: hidden;
+    /* Ẩn phần chữ vượt quá */
+}
